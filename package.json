@@ -1,0 +1,26 @@
+{
+  "name": "card-engine",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "npm --prefix web ci && npm --prefix web run build",
+    "start": "tsx src/server/index.ts",
+    "serve": "tsx src/server/index.ts",
+    "web": "npm --prefix web run dev"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@colyseus/core": "0.18.24",
+    "@colyseus/ws-transport": "0.18.4",
+    "tsx": "^4.19.4"
+  },
+  "devDependencies": {
+    "@colyseus/sdk": "0.18.9",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.8.3"
+  }
+}
